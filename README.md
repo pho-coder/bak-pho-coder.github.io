@@ -1,2 +1,3 @@
 # pho-coder.github.io
-my notes
+pho
+will change page for mobile only 20150804
