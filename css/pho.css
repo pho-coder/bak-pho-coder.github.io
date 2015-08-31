@@ -19,40 +19,80 @@ body {
   width: 100%;
 }
 
-.pho-header {
-  z-index: 10;
+.pho-container > div > input,
+.pho-container > div > span {
+  position: fixed;
+  font-size: 40px;
+  height: 100%;
+  width: 100%;
+  cursor: pointer;
+}
+
+.pho-container > div > input {
+    /*z-index: 1;*/
+    /*opacity: 0;*/
+}
+
+.pho-nav {
+  width: 40px;
+  height: 40px;
+}
+
+#nav-up {
   position: absolute;
   left: 50%;
   top: 0;
   margin-left: -20px;
+  z-index: 1;
 }
 
-.pho-lefter {
+#nav-up > input,
+#nav-up > span {
+ left: 0;
+}
+
+#nav-down {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  margin-left: -20px;
+  z-index: 1;
+}
+
+#nav-down > input,
+#nav-down > span {
+  left: 0;
+}
+
+#nav-left {
   position: absolute;
   left: 0;
   top: 50%;
   margin-top: -20px;
 }
 
-.pho-righter {
+#nav-left > input,
+#nav-left > span {
+  left: 0;
+}
+
+#nav-right {
   position: absolute;
   right: 0;
   top: 50%;
   margin-top: -20px;
 }
 
-.pho-footer {
-  position: absolute;
-  left: 50%;
-  bottom: 0;
-  margin-left: -20px;
+#nav-right > input,
+#nav-right > span {
+  left: 0;
 }
 
-span {
-  font-size: 40px;
+.hidden-div {
+  display: none;
 }
 
-.pho-header span {
+#nav-up {
   -webkit-animation:move-top 2s infinite;
           animation:move-top 2s infinite;
 }
@@ -79,7 +119,7 @@ span {
     }
 }
 
-.pho-footer span {
+#nav-down {
   -webkit-animation:move-down 2s infinite;
           animation:move-down 2s infinite;
 }
@@ -106,7 +146,7 @@ span {
     }
 }
 
-.pho-lefter span {
+#nav-left {
   -webkit-animation:move-left 2s infinite;
           animation:move-left 2s infinite;
 }
@@ -133,7 +173,7 @@ span {
     }
 }
 
-.pho-righter span {
+#nav-right {
   -webkit-animation:move-right 2s infinite;
           animation:move-right 2s infinite;
 }
@@ -176,19 +216,24 @@ span {
           transform:translateY(-100%);
 }
 
+.pho-scroll-up {
+  -webkit-transform:translateY(0%);
+          transform:translateY(0%);
+}
+
+.pho-scroll-down {
+  -webkit-transform:translateY(-200%);
+          transform:translateY(-200%);
+}
+
 .pho-panel {
   position: relative;
   height: 100%;
   width: 100%;
-    display: -webkit-flex;
+  display: -webkit-flex;
   display:         flex;
   -webkit-align-items: center;
           align-items: center;
   -webkit-justify-content: center;
           justify-content: center;
-}
-
-#sp-up:hover ~ .pho-scroll {
-  -webkit-transform:translateY(0%);
-          transform:translateY(0%);
 }
